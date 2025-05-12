@@ -1,4 +1,4 @@
-# Selenium Test using Leaflet
+# Selenium Test with Leaflet
 Example for the [StackOverflow Question](https://stackoverflow.com/questions/79601421/get-the-position-of-a-leaflet-marker-using-selenium): 
 
 > What is the correct values to use to get the fixed value of the position of the marker?
