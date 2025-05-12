@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Example for Selenium Test</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+    <!-- pin marker for visualization -->
+    <script src="leaflet-pin.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+
+    <style>
+body {
+    margin: 0;
+}
+
+#map {
+    height: 100vh;
+    width: 100vw;
+}
+    </style>
+
+</head>
+<body>
+    
+    <div id="map"></div>
+
+    <script>
+        const map = L.map('map')
+            .setView([47.37682676381562, 8.538086139942175], 15);
+
+        map.attributionControl 
+            .setPrefix('<a href="https://leafletjs.com/">Leaflet</a>');
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        })
+            .addTo(map);
+
+        const lindenhof = [47.373, 8.5412];
+        const hauptbahnhof = [47.378169, 8.540178];
+
+        L.pinIconMarker(lindenhof, {
+            color: '#cd5b45',
+        })
+            .addTo(map);
+
+        const trainStationIcon = L.icon({
+            iconUrl: 'train-station.png',
+            iconSize: [48, 48],
+            iconAnchor: [24, 24],
+            popupAnchor: [0, -24],
+        })
+
+        L.marker(hauptbahnhof, {
+            icon: trainStationIcon,
+        })
+            .addTo(map);
+    </script>
+
+</body>
+</html>

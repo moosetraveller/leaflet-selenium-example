@@ -1,0 +1,20 @@
+{
+  "name": "leaflet-playground-test",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "test",
+    "leaflet",
+    "playgound"
+  ],
+  "author": "Thomas Zuberbuehler",
+  "type": "commonjs",
+  "main": "firefox-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "geckodriver": "^5.0.0",
+    "selenium-webdriver": "^4.32.0"
+  }
+}
